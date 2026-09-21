@@ -1,0 +1,10 @@
+com\odontologia\historial\security\JwtAuthenticationFilter.class
+com\odontologia\historial\security\JwtTokenValidator.class
+com\odontologia\historial\security\SecurityConfig.class
+com\odontologia\historial\entity\HistorialClinico.class
+com\odontologia\historial\repository\HistorialClinicoRepository.class
+com\odontologia\historial\dto\HistorialClinicoDTO.class
+com\odontologia\historial\service\HistorialClinicoService.class
+com\odontologia\historial\entity\HistorialClinico$HistorialClinicoBuilder.class
+com\odontologia\historial\HistorialServiceApplication.class
+com\odontologia\historial\controller\HistorialClinicoController.class

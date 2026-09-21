@@ -1,0 +1,39 @@
+# Caddyfile - API Gateway para Microservicios de Consultorio Odontológico
+
+:8000 {
+    # Microservicio de Autenticación
+    handle /api/auth* {
+        reverse_proxy localhost:8081
+    }
+
+    # Microservicio de Pacientes
+    handle /api/pacientes* {
+        reverse_proxy localhost:8082
+    }
+
+    # Microservicio de Odontólogos
+    handle /api/odontologos* {
+        reverse_proxy localhost:8083
+    }
+
+    # Microservicio de Citas
+    handle /api/citas* {
+        reverse_proxy localhost:8084
+    }
+
+    # Microservicio de Historial Clínico
+    handle /api/historiales* {
+        reverse_proxy localhost:8085
+    }
+
+    # Headers de seguridad
+    header {
+        X-Content-Type-Options "nosniff"
+        X-Frame-Options "DENY"
+        Referrer-Policy "strict-origin-when-cross-origin"
+    }
+
+    log {
+        output file caddy_gateway.log
+    }
+}
